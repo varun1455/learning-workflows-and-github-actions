@@ -1,0 +1,13 @@
+name: Hello workflow
+on: push
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print messages
+        run : |
+          echo "Hello from github actions"
+          echo "Runner OS:"
+          uname -a
