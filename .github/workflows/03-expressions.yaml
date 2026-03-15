@@ -1,0 +1,10 @@
+name : Expressions Demo
+on : push
+jobs:
+  expressions-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run : echo "Repository = ${{github.repository}}"
+      - run : echo "Triggered by = ${{github.actor}}"
+      - run : echo "Branch = ${{github.ref}}"
