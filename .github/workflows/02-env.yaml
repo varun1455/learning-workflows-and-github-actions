@@ -1,0 +1,17 @@
+name: Environment Variables
+on : push
+jobs:
+  env-demo:
+    runs-on: ubuntu-latest
+
+    env:
+      APP_NAME: Workflow2App
+      VERSION: 1.0
+
+    steps:
+      - run : echo "App is $APP_NAME with version $VERSION"
+
+      - name: Step override env
+        env:
+          VERSION: 2.0
+        run : echo "App is $APP_NAME with version $VERSION"
